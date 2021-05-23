@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="obs.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+	<head runat="server">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+		<title>OBS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<style>
+			#banner{
+				background-image:url(images/banner.jpg);
+			}
+		</style>
+	</head>
+
+	<body>
+		<form id="form1" runat="server">
+			<div class="page-wrap">
+				<nav id="nav">
+					<ul>
+						<li><a href="Kimlik.aspx"><span class="icon fa-file-text-o"></span></a></li>
+						<li style="color:darkgrey"><p>Kimlik Bilgileri</p></li>
+					</ul>
+				</nav>
+		
+				<section id="main">
+					<section id="banner">
+						<div class="inner">
+							<h1>Öğrenci Bilgi Sistemine Hoşgeldin</h1>
+						</div>
+					</section>
+
+					<center>
+						<section id="contact">	
+							<div class="column">
+								<form action="#" method="post">
+									<div class="field half first">
+										<label for="name">Öğrenci No:</label>
+										<asp:TextBox ID="TextBox1" runat="server" PlaceHolder="Student Number"></asp:TextBox>
+									</div>
+									<div class="field half">
+										<label for="surname">Şifre</label>
+										<asp:TextBox ID="TextBox2" runat="server" PlaceHolder="Password" TextMode="Password"></asp:TextBox>
+									</div>
+									<div class="field half">
+										<asp:Button ID="Login" runat="server" Text="Giriş" OnClick="Login_Click" />
+									</div>
+									<ul class="actions">
+										<div class="field half">
+											<asp:TextBox ID="TextBox4" runat="server" PlaceHolder="Success" ></asp:TextBox>
+										</div>
+									</ul>
+								</form>
+							</div>
+							<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+						</section>
+					</section>
+				</center>
+			</div>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+		</form>
+	</body>
+</html>
